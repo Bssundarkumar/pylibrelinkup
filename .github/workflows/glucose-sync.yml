@@ -3,7 +3,7 @@ name: Sync glucose to Supabase
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "7-57/10 * * * *"
 
 permissions:
   contents: read
