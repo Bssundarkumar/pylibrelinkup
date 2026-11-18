@@ -27,7 +27,7 @@ jobs:
         run: python -m pip install "pylibrelinkup @ git+https://github.com/robberwick/pylibrelinkup.git@00944c9aff47868c8c3639fe078bc5f79a052b48"
       - name: Sync readings
         env:
-          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_URL: ${{ vars.SUPABASE_URL || 'https://mtixqgoifyajrnerguec.supabase.co' }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
           LIBRELINKUP_EMAIL: ${{ secrets.LIBRELINKUP_EMAIL }}
           LIBRELINKUP_PASSWORD: ${{ secrets.LIBRELINKUP_PASSWORD }}
